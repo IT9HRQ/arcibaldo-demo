@@ -1,7 +1,8 @@
 {
   "name": "arcibaldo-demo",
   "scripts": {
-    "start": "node index"
+    "start": "gulp start",
+    "watch-style": "gulp watch-style"
   },
   "dependencies": {
     "arcibaldo": "^1.0.3",

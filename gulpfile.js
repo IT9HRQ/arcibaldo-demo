@@ -19,23 +19,20 @@ gulp.task("style-to-public-css", function() {
         .pipe(gulp.dest("./public/css"));
 });
 
-gulp.task("update-css", function(done) {
-    runSequence("build-sass", "style-to-public-css", done);
-});
+gulp.task("update-css", gulp.series("build-sass", "style-to-public-css"));
 
 gulp.task("watch-style", function(){
     return watch([
-        'style/style.sass',
-        'style/**/*.css'
-    ], function() {
-        gulp.run(["update-css"]);
+        'style/style.scss'
+    ], () => {
+        gulp.task('update-css')();
     });
 });
 
 gulp.task('start-server', function (done) {
     nodemon({
         script: 'index.js'
-        , ext: 'js html'
+        , ext: 'ejs js html'
         , env: { 'NODE_ENV': 'development' }
         , done: done
     })
@@ -47,5 +44,5 @@ gulp.task("start", function(done) {
 
 
 gulp.task("default", function() {
-    gulp.run(["start"]);
+    gulp.task("start")();
 });

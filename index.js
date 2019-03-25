@@ -12,3 +12,5 @@ app.get('/', function (req, res) {
 app.listen(3000, function () {
     console.log('arcibaldo demo ready on http://localhost:3000');
 });
+
+var a = 1;
