@@ -1,0 +1,18 @@
+// Arcibaldo variables
+@import 'node_modules/arcibaldo/scss/arcibaldo.variables';
+
+// Custom variables: will overwrite Arcibaldo default variables
+$base-space-value: 10px;
+
+// Required
+@import 'node_modules/arcibaldo/scss/functions';
+@import 'node_modules/arcibaldo/scss/mixins';
+
+// Optional
+@import 'node_modules/arcibaldo/scss/theme/layout';
+@import 'node_modules/arcibaldo/scss/theme/layout-flexbox';
+@import 'node_modules/arcibaldo/scss/theme/spacing';
+@import 'node_modules/arcibaldo/scss/theme/typography';
+@import 'node_modules/arcibaldo/scss/theme/buttons';
+@import 'node_modules/arcibaldo/scss/theme/shadings';
+@import 'node_modules/arcibaldo/scss/theme/geometry';
